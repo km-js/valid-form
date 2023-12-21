@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValidForm</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/53fcf17c86.js" crossorigin="anonymous"></script>
+<body>
+    <div class="container">
+<form>
+    <i id="plane" class="fa-regular fa-paper-plane"></i>
+    <div>
+        <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()"/>
+            <span id="name-error">
+                <!-- name is required -->
+            </span>
+    </div>
+ 
+    <div>
+        <label>Phone No</label>
+        <input id="phone-number" onkeyup="validatePhone()" placeholder="123 456 7890" />
+        <span id="phone-error">
+            <!-- phone is required -->
+        </span>
+    </div>
+
+    <div>
+        <label>Email Id</label>
+            <input id="email-address" onkeyup="validateEmail()" placeholder="Enter Email" />
+            <span id="email-error">
+                <!-- email is required -->
+            </span>  
+    </div>
+    
+    <div>
+        <label>Your Message</label>
+            <textarea id="message" onkeyup="validateMessage()" rows="5" placeholder="Enter your message"> </textarea>
+            <span id="message-error">
+                <!-- message is required -->
+            </span>
+    </div>
+   
+    <button onclick="return validateForm()">Submit</button>
+    <span id="submit-error">
+        <!-- please fix error -->
+    </span>
+</form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
